@@ -10,10 +10,10 @@ A simple microservice for handling flight CRUD
 ```
 - Inside `src/config` create a new file `config.json` and then add the following piece of json 
 ```
-    {
+{
   "development": {
     "username": <YOUR_DB_LOGIN_NAME>,
-    "password": <YOUR_DB_PASSWORD>,
+    "password": <YOUR_DB_PASSWORD>,git 
     "database": "Flight_Search_DB_local",
     "host": "127.0.0.1",
     "dialect": "mysql"

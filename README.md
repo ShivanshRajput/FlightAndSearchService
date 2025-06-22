@@ -41,3 +41,14 @@ npx sequalize db:create
 │
 └── test/                  # (Planned) Unit and integration tests
 ```
+
+
+##  DB Design
+- Airplane Table 
+- Flight Table
+- Airport Table
+- City Table
+
+- A flight belongs to an airplane but one airplane can be used in multiple flights.
+- A city can have many airports, but one airport belongs to one city.
+- One airport can have many flights, but one flight belongs to one airport.

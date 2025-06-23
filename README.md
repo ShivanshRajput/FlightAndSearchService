@@ -24,6 +24,10 @@ A simple microservice for handling flight CRUD
 ```
 npx sequalize db:create
 ```
+- Once DB is created we can have migrations to create models inside DB by executing
+```
+npx sequalize db:migrate
+```
 
 ## 📁 Folder Structure
 

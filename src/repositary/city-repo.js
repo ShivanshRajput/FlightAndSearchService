@@ -7,7 +7,7 @@ class CityRepositary{
             const city = City.create({ name })
             return city;
         } catch (error) {
-            console.log("something went wring in the repositary layer");
+            console.log("something went wrong in the repositary layer");
             throw(error);
         }
     }
@@ -21,7 +21,7 @@ class CityRepositary{
             });
             return true;
         } catch (error) {
-            console.log("something went wring in the repositary layer");
+            console.log("something went wrong in the repositary layer");
             throw(error);
         }
     }
@@ -35,7 +35,7 @@ class CityRepositary{
             })
             return city;
         } catch (error) {
-            console.log("something went wring in the repositary layer");
+            console.log("something went wrong in the repositary layer");
             throw(error);
         }
     }
@@ -45,7 +45,7 @@ class CityRepositary{
             const city = await City.findByPk(cityId);
             return city;
         } catch (error) {
-            console.log("something went wring in the repositary layer");
+            console.log("something went wrong in the repositary layer");
             throw(error);
         }
     }

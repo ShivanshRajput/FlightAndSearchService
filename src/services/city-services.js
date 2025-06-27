@@ -2,7 +2,7 @@ const {CityRepositary} = require('../repositary/index');
 
 class CityServices {
     constructor() {
-        this.cityRepositary = new CityRepositary
+        this.cityRepositary = new CityRepositary;
     }
 
     async createCity(data){
@@ -41,3 +41,5 @@ class CityServices {
         }
     }
 }
+
+module.exports = CityServices;

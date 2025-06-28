@@ -30,11 +30,12 @@ class CityServices {
             const city = await this.cityRepositary.updateCity(cityId , data);
             return city; 
         } catch (error) {
-            console.log("something went wrong at service layer")
+            console.log("something went wrong at service layer");
+            return error;
         }
     }
 
-    async getCity(){
+    async getCity(cityId){
         try {
             const city = await this.cityRepositary.getCity(cityId);
             return city; 

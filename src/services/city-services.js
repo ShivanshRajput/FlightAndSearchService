@@ -10,7 +10,8 @@ class CityServices {
             const city = await this.cityRepositary.createCity(data);
             return city;
         } catch (error) {
-            console.log("something went wrong at service layer")
+            console.log("something went wrong at service layer");
+            return error;
         }
     }
 
@@ -19,7 +20,8 @@ class CityServices {
             const response = await this.cityRepositary.deleteCity(cityId);
             return response;
         } catch (error) {
-            console.log("something went wrong at service layer")
+            console.log("something went wrong at service layer");
+            return error;
         }
     }
 
@@ -37,7 +39,8 @@ class CityServices {
             const city = await this.cityRepositary.getCity(cityId);
             return city; 
         } catch (error) {
-            console.log("something went wrong at service layer")
+            console.log("something went wrong at service layer");
+            return error;
         }
     }
 }

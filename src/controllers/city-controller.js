@@ -82,9 +82,30 @@ const get = async (req,res) => {
     }
 }
 
+const getAll = async (req , res) => {
+    try {
+        const cities = await cityService.getAllCities();
+        return res.status(200).json({
+            data:cities,
+            success:true,
+            message:'All Cities Fetched Successfully',
+            err:{}
+        });
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({
+            data:{},
+            success:false,
+            message:'All Cities Fetching Failed',
+            err : error
+        })
+    }
+}
+
 module.exports = {
     create,
     update,
     destroy,
-    get
+    get,
+    getAll
 }

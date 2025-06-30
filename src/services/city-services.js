@@ -44,6 +44,16 @@ class CityServices {
             return error;
         }
     }
+
+    async getAllCities(){
+        try {
+            const cities = await this.cityRepositary.getAllCities();
+            return cities;
+        } catch (error) {
+            console.log("something went wrong at service layer");
+            return error;
+        }
+    }
 }
 
 module.exports = CityServices;

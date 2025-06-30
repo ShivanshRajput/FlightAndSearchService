@@ -56,3 +56,11 @@ npx sequalize db:migrate
 - A flight belongs to an airplane but one airplane can be used in multiple flights.
 - A city can have many airports, but one airport belongs to one city.
 - One airport can have many flights, but one flight belongs to one airport.
+
+
+## Tables 
+
+### City -> id, name, createdAt, updatedAt
+### Airport -> id, name, address, city_id, createdAt, updatedAt
+    Relationship -> City can have many Airports, but one Airport can belong to one City (one-many relationship)
+### 

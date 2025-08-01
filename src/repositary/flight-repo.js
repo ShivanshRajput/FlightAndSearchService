@@ -37,7 +37,7 @@ class FlightRepositary{
 
     async getFlight(flightId){
         try {
-            const flight = await Flights.FindByPk(flightId);
+            const flight = await Flights.findByPk(flightId);
             return flight;
         } catch (error) {
             console.log("something went wrong in the repositary layer");
@@ -45,7 +45,7 @@ class FlightRepositary{
         }
     }
 
-    async getFlight(filter){
+    async getAllFLights(filter){
         try {
             const filterObject = this.#createFilter(filter);
             const flight = await Flights.findAll({
@@ -55,6 +55,20 @@ class FlightRepositary{
         } catch (error) {
             console.log("something went wrong in the repositary layer");
             throw(error);
+        }
+    }
+
+    async updateFlight(flightId , data){
+        try {
+            await Flights.update(data , {
+                where: {
+                    id: flightId
+                }
+            });
+            return true;
+        } catch (error) {
+            console.log("something went wrong in the repositary layer");
+            throw(error); 
         }
     }
 }
